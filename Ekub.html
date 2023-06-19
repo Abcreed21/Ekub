@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kablammo">
+  <link rel="stylesheet" href="https://fontawesome.com/icons/coin?f=classic&s=duotone">
+  <link rel="stylesheet" href="Ekub.css">
+  <link rel="shortcut icon" href="IMG/cash1.svg" type="image/x-icon">
+  <title>Ekub</title>
+
+</head>
+
+<body>
+  <header>
+    <nav>
+      <i class="fa-duotone fa-coin">
+        <h1>Equb</h1>
+      </i>
+
+    </nav>
+  </header>
+  <section class="left">
+    <div class="row">
+      <div class="col-md-4">
+        <form>
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter Full Name" required>
+          </div>
+          <div class="form-group">
+            <label for="money">Money:</label>
+            <select id="money" name="money" required>
+              <option value="">Choose money amount</option>
+              <option value="500">500</option>
+              <option value="1000">1000</option>
+              <option value="5000">5000</option>
+              <option value="10000">10000</option>
+              <option value="25000">25000</option>
+              <option value="50000">50000</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="bank">Bank Number:</label>
+            <input type="text" id="bank" name="bank" placeholder="Enter Bank Number" required>
+            <button type="button" class="btn" onclick="register()">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    </div>
+  </section>
+  <section class="right">
+    <div class="col-md-8">
+      <div class="table-container" id="table">
+        <div class="wheel-container">
+          <div class="wheel">
+            <div class="slice slice-1"></div>
+            <div class="slice slice-2"></div>
+            <div class="slice slice-3"></div>
+            <div class="slice slice-4"></div>
+            <div class="slice slice-5"></div>
+            <div class="pointer"></div>
+          </div>
+          <button type="button" class="btn" onclick="spin()">Spin </button>
+          <div id="winner" class="winner"></div>
+          <button type="button" class="btn" onclick="withdraw()">Withdraw</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <img src="IMG/cash1.svg" style="width: 30px; height: 30px;">
+    <p>&copy; 2023 Ekub. All rights reserved.</p>
+    <img src="IMG/cash1.svg" style="width: 30px; height: 30px;">
+  </footer>
+</body>
+<script src="Ekub.js"></script>
+
+</html>

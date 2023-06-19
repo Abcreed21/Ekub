@@ -1,0 +1,276 @@
+body {
+    background-image: url(IMG/OIP-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kablammo', sans-serif;
+    filter: brightness(70%);
+    min-height: 100vh;
+  }
+
+  nav {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  nav h1 {
+    color: #82df0a;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 23px;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    background-color: #ff0;
+    color: #333;
+  }
+
+  section {
+    display: inline-block;
+    color: #fff;
+    width: 50%;
+    height: 500px;
+    padding: 40px;
+    box-sizing: border-box;
+  }
+
+  .left {
+    float: left;
+  }
+
+  .right {
+    float: right;
+  }
+
+  .table-container {
+    position: relative;
+    height: 100%;
+  }
+
+  .wheel-container {
+    padding-top: 410px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .wheel {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border: 10px solid #333;
+    transition: transform 5s ease-in-out;
+  }
+
+  .wheel.spinning {
+    animation: spin 5s linear infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .slice {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center center;
+    clip-path: polygon(50% 50%, 100% 0, 100% 50%);
+  }
+
+  .slice-1 {
+    background-color: #f44336;
+    transform: rotate(0deg);
+  }
+
+  .slice-2 {
+    background-color: #2196f3;
+    transform: rotate(72deg);
+  }
+
+  .slice-3 {
+    background-color: #4caf50;
+    transform: rotate(144deg);
+  }
+
+  .slice-4 {
+    background-color: #ffc107;
+    transform: rotate(216deg);
+  }
+
+  .slice-5 {
+    background-color: #9c27b0;
+    transform: rotate(288deg);
+  }
+
+  .pointer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  form input[type="submit"] {
+    background-color: #0077cc;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+  }
+
+  form input[type="submit"]:hover {
+    background-color: #00aaff;
+  }
+
+  .winner {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .form-group {
+    margin: 2px auto;
+    padding: 20px;
+    max-width: 400px;
+  }
+
+  header a {
+    color: #fff;
+  }
+
+  header a:hover {
+    color: #ddd;
+  }
+
+  label {
+    font-size: 30px;
+    display: block;
+    font-weight: bold;
+    color: #82df0a;
+    animation: hueRotate 7s alternate infinite;
+  }
+
+
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  button.btn {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    font-family: 'Kablammo', sans-serif;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  button.btn:hover {
+    background-color: #555;
+  }
+
+  button.loading {
+    background-color: #ccc;
+  }
+
+  button.loading:after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    border-top-color: #4CAF50;
+    animation: spin 0.8s linear infinite;
+    margin: 10px auto 0;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  footer {
+    background-color: #333;
+    color: #82df0a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  footer p {
+    margin-bottom: 20px;
+    align-items: center;
+  }
+
+  /* Responsive Design */
+
+  @media (max-width: 768px) {
+
+    .left,
+    .right {
+      float: none;
+    }
+
+    .left,
+    .right,
+    section {
+      width: 100%;
+    }
+  }
